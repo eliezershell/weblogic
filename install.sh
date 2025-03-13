@@ -14,5 +14,5 @@ sudo swapon /swapfile
 sudo dpkg -i jdk-11.0.26_linux-x64_bin.deb
 
 # instalar weblogic
-unzip fmw_14.1.1.0.0_wls_lite_slim_Disk1_1of1.zip
-java -jar fmw_14.1.1.0.0_wls_lite_quick_slim_generic.jar
+unzip V1045131-01.zip
+java -jar fmw_14.1.2.0.0_wls.jar

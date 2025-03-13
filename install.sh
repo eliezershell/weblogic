@@ -8,7 +8,7 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 
 # instalar oracle jdk
-sudo dpkg -i jdk-11.0.26_linux-x64_bin.deb
+sudo dpkg -i jdk-17.0.12_linux-x64_bin.deb
 
 # instalar weblogic
 java -jar fmw_14.1.2.0.0_wls.jar -silent

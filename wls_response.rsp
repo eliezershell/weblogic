@@ -1,19 +1,12 @@
 [ENGINE]
 Response File Version=1.0.0.0.0
-# Não altere essa versão, é padrão do instalador.
 
 [GENERIC]
-ORACLE_HOME=/u01/app/oracle/middleware
-# Diretório onde o WebLogic será instalado
-
+ORACLE_HOME=/opt/oracle/middleware
 INSTALL_TYPE=WebLogic Server
-# Tipo de instalação. Outras opções incluem:
-# "Coherence" (para instalar Oracle Coherence)
-# "Complete with Examples" (para instalar tudo, incluindo exemplos)
 
 [SYSTEM]
-DECLINE_SECURITY_UPDATES=false
-# Define se deseja receber atualizações de segurança automáticas (true/false)
-
+INVENTORY_LOCATION=/opt/oraInventory
+UNIX_GROUP_NAME=ubuntu
+DECLINE_SECURITY_UPDATES=true
 SECURITY_UPDATES_VIA_MYORACLESUPPORT=false
-# Se true, precisa informar os dados de login do Oracle Support

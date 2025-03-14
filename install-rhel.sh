@@ -21,3 +21,16 @@ sudo mkdir -p /opt/oracle/middleware
 sudo chown -R ${USER}:${USER} /opt/oracle
 chmod -R 775 /opt/oracle
 java -jar fmw_14.1.2.0.0_wls.jar -silent -responseFile ${PWD}/wls_response.rsp
+
+
+cd /opt/oracle/middleware/oracle_common/common/nodemanager/security
+keytool -genkey -alias DemoIdentity -keyalg RSA -keystore DemoIdentity.jks -storepass changeit -keypass changeit -validity 365 -dname "CN=weblogic, OU=IT, O=MyCompany, L=City, S=State, C=BR"
+
+cd /opt/oracle/middleware/wlserver/server/bin
+
+vi /opt/oracle/middleware/oracle_common/common/nodemanager/nodemanager.properties
+"
+KeyStores=CustomIdentityAndCustomTrust
+CustomIdentityKeyStoreFileName=/opt/oracle/middleware/oracle_common/common/nodemanager/security/DemoIdentity.jks
+CustomIdentityKeyStorePassPhrase=changeit
+"

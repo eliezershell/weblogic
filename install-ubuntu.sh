@@ -14,7 +14,7 @@ sudo dpkg -i jdk-17.0.12_linux-x64_bin.deb
 script_path=$(java -jar fmw_14.1.2.0.0_wls.jar -silent 2>&1 | grep -oE '/tmp/createCentralInventory[0-9]+\.sh')
 
 # Instalar inventário central
-sudo ${script_path} /opt/oraInventory ubuntu
+sudo ${script_path} /opt/oraInventory ${USER}
 
 # instalar novamente o weblogic
 sudo mkdir -p /opt/oracle/middleware

@@ -14,4 +14,7 @@ sudo dpkg -i jdk-17.0.12_linux-x64_bin.deb
 java -jar fmw_14.1.2.0.0_wls.jar -silent
 
 # Instalar inventário central
-/tmp/createCentralInventory1741902815511.sh /opt/oraInventory ubuntu
+sudo /tmp/createCentralInventory{...}.sh /opt/oraInventory ubuntu
+
+# instalar novamente o weblogic
+java -jar fmw_14.1.2.0.0_wls.jar -silent -responseFile wls_response.rsp

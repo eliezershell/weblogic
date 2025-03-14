@@ -18,6 +18,6 @@ sudo /tmp/createCentralInventory{...}.sh /opt/oraInventory ubuntu
 
 # instalar novamente o weblogic
 sudo mkdir -p /opt/oracle/middleware
-sudo chown -R ubuntu:ubuntu /opt/oracle
+sudo chown -R ${USER}:${USER} /opt/oracle
 chmod -R 775 /opt/oracle
 java -jar fmw_14.1.2.0.0_wls.jar -silent -responseFile ${PWD}/wls_response.rsp
